@@ -125,14 +125,14 @@ body{
     z-index: 2;
     transition: all 0.3s ease;
 }
-.player.active span:first-child{
+.players.active span:first-child{
     color: #56baed;
 }
 
-.player.active span:nth-child(2){
+.players.active span:nth-child(2){
     color: #fff;
 }
-.player.active .slider{
+.players.active .slider{
     left: 50%;
 }
 
@@ -162,7 +162,14 @@ body{
     border-radius: 5px;
     max-width: 350px;
     width: 100%;
-    display: none;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50% , -50%) scale(0.9);
+}
+.result-box.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%,-50%) scale(1);
 }
 
 .result-box .won-text{
